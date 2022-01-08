@@ -57,10 +57,12 @@ class MainActivityViewModel: ViewModel() {
             }
         }
     }
-    fun getPostNewDoc(correo: String) {
+    fun getPostNewDoc(Correo: String,TipoAdjunto: String,Nombre: String,Apellido: String,
+                      Ciudad: String,TipoId: String, Identificacion:String, Adjunto: String
+                      ) {
         viewModelScope.launch {
             try {
-                //myResponseNewDoc.value = UserNetwork.retrofit.getPostNewDoc(correo)
+                myResponseNewDoc.value = UserNetwork.retrofit.getPostNewDoc(Correo,TipoAdjunto,Nombre, Apellido, Ciudad, TipoId,Identificacion,Adjunto)
             } catch (e:Exception) {
                 myResponseNewDoc.value = null
             }

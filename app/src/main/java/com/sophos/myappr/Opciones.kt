@@ -23,8 +23,6 @@ class Opciones : AppCompatActivity() {
         val texto6 = findViewById<TextView>(R.id.textView6)
         val texto7 = findViewById<TextView>(R.id.textView7)
 
-
-
         val name=intent.getStringExtra("username")
         val correo=intent.getStringExtra("correo")
         println(name)
@@ -36,14 +34,18 @@ class Opciones : AppCompatActivity() {
         btn_7.setOnClickListener {
             texto7.text = correo
             if (correo != null) {
-                viewModel.getPostNewDoc(correo)
+                println("Paso por aca")
+                viewModel.getPostNewDoc( "jsuarezq1@gmail.com", "Periodico", "Oscar", "Sanchez", "Pasto", "RC", "12122","adad" )
+                println("Paso por aca 2 ")
             }
+
             viewModel.myResponseNewDoc.observe(this, Observer {
-                if (it != null) {
-                    Log.d(TAG2, it.Apellido.toString())
-                    Log.d(TAG2, it.Nombre.toString())
+                println("Paso por aca 3")
+                if (true) {
+                    Log.d(TAG2, it.put.toString())
+                    Log.d(TAG2, it.Identificacion.toString())
                     Log.d(TAG2, it.TipoAdjunto.toString())
-                    texto7.text = "Envio Documents"
+                    texto7.text = "Enviado Documento"
                 } else texto7.text = "error de Envio"
             })
 

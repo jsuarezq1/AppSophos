@@ -47,5 +47,6 @@ data class NewDocument(
     val Ciudad: String,
     val Correo: String,
     val TipoAdjunto: String,
-    val Adjunto: String
+    val Adjunto: String,
+    val put: Boolean
 )

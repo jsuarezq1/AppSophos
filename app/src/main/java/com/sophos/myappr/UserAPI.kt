@@ -27,14 +27,14 @@ interface UserAPI {
 
     @POST("RS_Documentos")
     suspend fun getPostNewDoc(
-        @Query("TipoId")  TipoId: String,
-        @Query("Identificacion") Identificacion: String,
-        @Query("Nombre") Nombre: String,
-        @Query("Apellido") Apellido: String,
-        @Query("Ciudad") Ciudad: String,
-        @Query("Correo") Correo: String,
-        @Query("TipoAdjunto") TipoAdjunto: String,
-        @Query("Adjunto") Adjunto: String
+        @Query("TipoId")  TipoId: String?,
+        @Query("Identificacion") Identificacion: String?,
+        @Query("Nombre") Nombre: String?,
+        @Query("Apellido") Apellido: String?,
+        @Query("Ciudad") Ciudad: String?,
+        @Query("Correo") Correo: String?,
+        @Query("TipoAdjunto") TipoAdjunto: String?,
+        @Query("Adjunto") Adjunto: String?
     ): NewDocument
 
 }
