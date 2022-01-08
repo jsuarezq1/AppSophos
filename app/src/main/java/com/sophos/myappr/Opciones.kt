@@ -1,5 +1,6 @@
 package com.sophos.myappr
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -53,6 +54,10 @@ class Opciones : AppCompatActivity() {
                     println("Entrees: $oficinas")
                 } else texto7.text = "error"
             })
+
+            val intento1 = Intent(this, MapsActivity::class.java)
+            //intento1.putExtra("username", it.nombre.toString())
+            startActivity(intento1)
         }
     }
 }
