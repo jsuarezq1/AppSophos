@@ -24,7 +24,7 @@ data class Usuario(
 )
 data class Documents(
     val Count: Int,
-    val Items: List<Documents>,
+    val Items: List<Document>,
     val ScannedCount: Int
 )
 data class Document(

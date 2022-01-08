@@ -51,7 +51,7 @@ class MainActivityViewModel: ViewModel() {
     fun getPostDoc(correo: String) {
         viewModelScope.launch {
             try {
-                //myResponseDoc.value = UserNetwork.retrofit.getPostDoc(correo)
+                myResponseDoc.value = UserNetwork.retrofit.getPostDoc(correo)
             } catch (e:Exception) {
                 myResponseDoc.value = null
             }

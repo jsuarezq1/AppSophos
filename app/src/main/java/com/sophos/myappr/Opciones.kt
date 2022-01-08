@@ -43,29 +43,32 @@ class Opciones : AppCompatActivity() {
                     Log.d(TAG2, it.Apellido.toString())
                     Log.d(TAG2, it.Nombre.toString())
                     Log.d(TAG2, it.TipoAdjunto.toString())
-                    texto7.text = "Funciona Documents"
-                } else texto6.text = "error de ciudad"
+                    texto7.text = "Envio Documents"
+                } else texto7.text = "error de Envio"
             })
-            //email.setText("")
 
         }
 
         //Ver Documentos
         btn_8.setOnClickListener {
             texto7.text = correo
-            if (correo != null) {
-                viewModel.getPostDoc(correo)
-            }
+            viewModel.getPostDoc("jsuarezq1@gmail.com")
+            println("pasa por aqui")
             viewModel.myResponseDoc.observe(this, Observer {
-                if (it != null) {
-                    Log.d(TAG2, it.Items[0].toString())
-                    Log.d(TAG2, it.Count.toString())
-                    Log.d(TAG2, it.ScannedCount.toString())
-                    texto7.text = "Funciona Documents"
-                } else texto6.text = "error de ciudad"
-            })
-            //email.setText("")
+                val m: Int = it.ScannedCount.toInt()
+                Log.d(TAG2, it.ScannedCount.toString())
+                Log.d(TAG2, it.Count.toString())
+                for(i in 0 .. m) {
+                    Log.d(TAG2, it.Items[i].Nombre.toString())
+                    Log.d(TAG2, it.Items[i].Apellido.toString())
+                    Log.d(TAG2, it.Items[i].Fecha.toString())
+                    Log.d(TAG2, it.Items[i].TipoAdjunto.toString())
+                    Log.d(TAG2, it.Items[i].IdRegistro.toString())
+                }
+                texto7.text = it.Count.toString()
 
+            })
+            //texto7.text = "error de recepcion"
         }
 
         // Ver mapa
