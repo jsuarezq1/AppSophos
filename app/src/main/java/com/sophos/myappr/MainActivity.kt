@@ -74,12 +74,13 @@ class MainActivity : AppCompatActivity() {
                 viewModel.getPostUserQ(miCorreo, "tYGZ6ZdLVJdknjav")
                 viewModel.myResponseUserQ.observe(this, Observer {
                     if (it.acceso) {
-                            Log.d(TAG, it.nombre.toString())
-                            Log.d(TAG, it.apellido.toString())
+                        Log.d(TAG, it.nombre.toString())
+                        Log.d(TAG, it.apellido.toString())
 
-                            val intento1 = Intent(this, Opciones::class.java)
-                            intento1.putExtra("username", it.nombre.toString())
-                            startActivity(intento1)
+                        val intento1 = Intent(this, Opciones::class.java)
+                        intento1.putExtra("username", it.nombre.toString())
+                        intento1.putExtra("correo", miCorreo)
+                        startActivity(intento1)
                         } else texto.text = "No existe usuario"
                     })
                 texto.text = "No entra "

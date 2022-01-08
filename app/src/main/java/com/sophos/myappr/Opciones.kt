@@ -26,10 +26,49 @@ class Opciones : AppCompatActivity() {
 
 
         val name=intent.getStringExtra("username")
+        val correo=intent.getStringExtra("correo")
         println(name)
+        println(correo)
 
         texto6.text = name.toString()
 
+        //Enviar Documento
+        btn_7.setOnClickListener {
+            texto7.text = correo
+            if (correo != null) {
+                viewModel.getPostNewDoc(correo)
+            }
+            viewModel.myResponseNewDoc.observe(this, Observer {
+                if (it != null) {
+                    Log.d(TAG2, it.Apellido.toString())
+                    Log.d(TAG2, it.Nombre.toString())
+                    Log.d(TAG2, it.TipoAdjunto.toString())
+                    texto7.text = "Funciona Documents"
+                } else texto6.text = "error de ciudad"
+            })
+            //email.setText("")
+
+        }
+
+        //Ver Documentos
+        btn_8.setOnClickListener {
+            texto7.text = correo
+            if (correo != null) {
+                viewModel.getPostDoc(correo)
+            }
+            viewModel.myResponseDoc.observe(this, Observer {
+                if (it != null) {
+                    Log.d(TAG2, it.Items[0].toString())
+                    Log.d(TAG2, it.Count.toString())
+                    Log.d(TAG2, it.ScannedCount.toString())
+                    texto7.text = "Funciona Documents"
+                } else texto6.text = "error de ciudad"
+            })
+            //email.setText("")
+
+        }
+
+        // Ver mapa
         btn_9.setOnClickListener {
 
             val oficinas = mutableListOf<String>()

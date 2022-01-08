@@ -12,6 +12,8 @@ class MainActivityViewModel: ViewModel() {
     val myResponseList: MutableLiveData<List<City>> = MutableLiveData()
     val myResponseUser: MutableLiveData<Usuario> = MutableLiveData()
     val myResponseUserQ: MutableLiveData<Usuario> = MutableLiveData()
+    val myResponseDoc: MutableLiveData<Documents> = MutableLiveData()
+    val myResponseNewDoc: MutableLiveData<NewDocument> = MutableLiveData()
 
     fun getPost() {
         viewModelScope.launch {
@@ -43,6 +45,24 @@ class MainActivityViewModel: ViewModel() {
                 myResponseUserQ.value = UserNetwork.retrofit.getPostUserQ(idUsuario, clave)
             } catch (e:Exception) {
                 myResponseX.value = null
+            }
+        }
+    }
+    fun getPostDoc(correo: String) {
+        viewModelScope.launch {
+            try {
+                //myResponseDoc.value = UserNetwork.retrofit.getPostDoc(correo)
+            } catch (e:Exception) {
+                myResponseDoc.value = null
+            }
+        }
+    }
+    fun getPostNewDoc(correo: String) {
+        viewModelScope.launch {
+            try {
+                //myResponseNewDoc.value = UserNetwork.retrofit.getPostNewDoc(correo)
+            } catch (e:Exception) {
+                myResponseNewDoc.value = null
             }
         }
     }
