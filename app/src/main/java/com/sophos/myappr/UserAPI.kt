@@ -1,8 +1,10 @@
 package com.sophos.myappr
 
-import retrofit2.http.GET
-import retrofit2.http.POST
-import retrofit2.http.Query
+import okhttp3.RequestBody
+import okhttp3.ResponseBody
+import retrofit2.Response
+import retrofit2.http.*
+import javax.security.auth.callback.Callback
 
 interface UserAPI {
     @GET("RS_Oficinas?ciudad=Medellín")
@@ -27,14 +29,23 @@ interface UserAPI {
 
     @POST("RS_Documentos")
     suspend fun getPostNewDoc(
-        @Query("TipoId")  TipoId: String?,
-        @Query("Identificacion") Identificacion: String?,
-        @Query("Nombre") Nombre: String?,
-        @Query("Apellido") Apellido: String?,
-        @Query("Ciudad") Ciudad: String?,
-        @Query("Correo") Correo: String?,
-        @Query("TipoAdjunto") TipoAdjunto: String?,
-        @Query("Adjunto") Adjunto: String?
-    ): NewDocument
+        @Field ("TipoId")  TipoId: String?,
+        @Field("Identificacion") Identificacion: String?,
+        @Field("Nombre") Nombre: String?,
+        @Field("Apellido") Apellido: String?,
+        @Field("Ciudad") Ciudad: String?,
+        @Field("Correo") Correo: String?,
+        @Field("TipoAdjunto") TipoAdjunto: String?,
+        @Field("Adjunto") Adjunto: String?,
+        @Field("put") put: Boolean?): NewDocument
+
+    @POST("RS_Documentos")
+    suspend fun getNewDoc(@Body userData: NewDocument): NewDocument
+
+    interface TaskService {
+        @POST("/tasks")
+        fun createTask(@Body task: Task?, cb: Callback)
+    }
+
 
 }
