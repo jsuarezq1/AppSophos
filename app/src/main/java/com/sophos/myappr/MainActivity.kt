@@ -59,11 +59,12 @@ class MainActivity : AppCompatActivity() {
 
         btn_2.setOnClickListener {
             //Cambio de Activity
-            val intento1 = Intent(this, Opciones::class.java)
+            val intento1 = Intent(this, MainMenu::class.java)
             startActivity(intento1)
             //finish()
         }
 
+        //Ingresar
         btn_3.setOnClickListener {
             val miCorreo: String = email.text.toString()
             texto2.text = miCorreo

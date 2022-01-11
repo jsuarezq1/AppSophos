@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="feedbacktypelist">
+        <item>@string/feedbacktype1</item>
+        <item>@string/feedbacktype2</item>
+        <item>@string/feedbacktype3</item>
+        <item>@string/feedbacktype4</item>
+    </string-array>
+
+    <string-array name="Citylist">
+        <item>@string/citytype1</item>
+        <item>@string/citytype2</item>
+        <item>@string/citytype3</item>
+        <item>@string/citytype4</item>
+    </string-array>
+    <string-array name="Tipolist">
+        <item>@string/tipotype1</item>
+        <item>@string/tipotype2</item>
+        <item>@string/tipotype3</item>
+        <item>@string/tipotype4</item>
+    </string-array>
+</resources>

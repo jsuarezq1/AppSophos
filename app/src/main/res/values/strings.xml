@@ -1,4 +1,31 @@
 <resources>
-    <string name="app_name">MyAppR</string>
+    <string name="app_name">MyApp Sophos</string>
     <string name="title_activity_maps">MapsActivity</string>
+    <string name="title_activity_main_menu">MainMenu</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">Bienvenido</string>
+    <string name="second_fragment_label">Envio Documentación</string>
+    <string name="next">Enviar Documentos</string>
+    <string name="previous">Atrás</string>
+
+    <string name="hello_first_fragment">Hola</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="feedbackName">Tipo Documento</string>
+    <string name="feedbacktype1">CC</string>
+    <string name="feedbacktype2">TI</string>
+    <string name="feedbacktype3">CE</string>
+    <string name="feedbacktype4">PA</string>
+
+    <string name="citytype">Ciudad</string>
+    <string name="citytype1">Bogotá</string>
+    <string name="citytype2">Medellín</string>
+    <string name="citytype3">Panamá</string>
+    <string name="citytype4">Chile</string>
+
+    <string name="tipoA">Tipo de Adjunto </string>
+    <string name="tipotype1">Certificado de cuenta</string>
+    <string name="tipotype2">Cédula</string>
+    <string name="tipotype3">Factura</string>
+    <string name="tipotype4">Incapacidad</string>
 </resources>

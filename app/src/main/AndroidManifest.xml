@@ -31,6 +31,11 @@
             android:value="@string/google_maps_key" />
 
         <activity
+            android:name=".MainMenu"
+            android:exported="false"
+            android:label="@string/title_activity_main_menu"
+            android:theme="@style/Theme.MyAppR.NoActionBar" />
+        <activity
             android:name=".MapsActivity"
             android:exported="false"
             android:label="@string/title_activity_maps" />
