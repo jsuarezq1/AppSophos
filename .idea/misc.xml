@@ -9,12 +9,16 @@
         <entry key="..\:/Users/Jorge/AndroidStudioProjects/MyAppS/app/src/main/res/layout/activity_maps.xml" value="0.1" />
         <entry key="..\:/Users/Jorge/AndroidStudioProjects/MyAppS/app/src/main/res/layout/activity_menu.xml" value="0.22" />
         <entry key="..\:/Users/Jorge/AndroidStudioProjects/MyAppS/app/src/main/res/layout/activity_opciones.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/Jorge/AndroidStudioProjects/MyAppS/app/src/main/res/layout/activity_reyclerview.xml" value="0.12228260869565218" />
         <entry key="..\:/Users/Jorge/AndroidStudioProjects/MyAppS/app/src/main/res/layout/content_main_menu.xml" value="0.11875" />
         <entry key="..\:/Users/Jorge/AndroidStudioProjects/MyAppS/app/src/main/res/layout/fragment_first.xml" value="0.22" />
         <entry key="..\:/Users/Jorge/AndroidStudioProjects/MyAppS/app/src/main/res/layout/fragment_item.xml" value="0.11875" />
         <entry key="..\:/Users/Jorge/AndroidStudioProjects/MyAppS/app/src/main/res/layout/fragment_item_list.xml" value="0.11875" />
+        <entry key="..\:/Users/Jorge/AndroidStudioProjects/MyAppS/app/src/main/res/layout/fragment_item_list2.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/Jorge/AndroidStudioProjects/MyAppS/app/src/main/res/layout/fragment_maps.xml" value="0.13385416666666666" />
         <entry key="..\:/Users/Jorge/AndroidStudioProjects/MyAppS/app/src/main/res/layout/fragment_second.xml" value="0.22" />
+        <entry key="..\:/Users/Jorge/AndroidStudioProjects/MyAppS/app/src/main/res/layout/item_documento.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/Jorge/AndroidStudioProjects/MyAppS/app/src/main/res/layout/item_superhero.xml" value="0.3333333333333333" />
       </map>
     </option>
   </component>

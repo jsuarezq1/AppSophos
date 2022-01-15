@@ -5,6 +5,8 @@
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">Bienvenido</string>
     <string name="second_fragment_label">Envio Documentación</string>
+    <string name="maps_fragment_label">Oficinas cercanas</string>
+    <string name="item_list_fragment_label">Documentos enviados</string>
     <string name="next">Enviar Documentos</string>
     <string name="previous">Atrás</string>
 

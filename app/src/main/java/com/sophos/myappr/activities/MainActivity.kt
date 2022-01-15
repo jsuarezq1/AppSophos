@@ -1,4 +1,4 @@
-package com.sophos.myappr
+package com.sophos.myappr.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -9,6 +9,8 @@ import android.widget.EditText
 import android.widget.TextView
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.sophos.myappr.*
+import com.sophos.myappr.UI.FirstFragment
 import com.sophos.myappr.databinding.ActivityMainBinding
 import java.lang.NumberFormatException
 

@@ -1,49 +1,55 @@
 package com.sophos.myappr
 
+import android.content.Context
 import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 
 import com.sophos.myappr.placeholder.PlaceholderContent.PlaceholderItem
-import com.sophos.myappr.databinding.FragmentItemBinding
 
 /**
  * [RecyclerView.Adapter] that can display a [PlaceholderItem].
  * TODO: Replace the implementation with code for your data type.
  */
-class MyDocsRecyclerViewAdapter(
-    private val values: List<PlaceholderItem>
-) : RecyclerView.Adapter<MyDocsRecyclerViewAdapter.ViewHolder>() {
 
+
+class CustomAdapter(private val mList: List<Document>) :
+    RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
+
+    // create new views
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        // inflates the card_view_design view
+        // that is used to hold list item
+        val view = LayoutInflater.from(parent.context)
+            .inflate(R.layout.fragment_item, parent, false)
 
-        return ViewHolder(
-            FragmentItemBinding.inflate(
-                LayoutInflater.from(parent.context),
-                parent,
-                false
-            )
-        )
-
+        return ViewHolder(view)
     }
 
+    // binds the list items to a view
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val item = values[position]
-        holder.idView.text = item.id
-        holder.contentView.text = item.content
+
+        val ItemsViewModel = mList[position]
+
+        // sets the image to the imageview from our itemHolder class
+        //holder.imageView.setImageResource(ItemsViewModel.image)
+
+        // sets the text to the textview from our itemHolder class
+        holder.textView.text = ItemsViewModel.Nombre
+
     }
 
-    override fun getItemCount(): Int = values.size
-
-    inner class ViewHolder(binding: FragmentItemBinding) : RecyclerView.ViewHolder(binding.root) {
-        val idView: TextView = binding.itemNumber
-        val contentView: TextView = binding.content
-
-        override fun toString(): String {
-            return super.toString() + " '" + contentView.text + "'"
-        }
+    // return the number of the items in the list
+    override fun getItemCount(): Int {
+        return mList.size
     }
 
+    // Holds the views for adding it to image and text
+    class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView) {
+        //val imageView: ImageView = itemView.findViewById(R.id.imageview)
+        val textView: TextView = itemView.findViewById(R.id.textView)
+    }
 }

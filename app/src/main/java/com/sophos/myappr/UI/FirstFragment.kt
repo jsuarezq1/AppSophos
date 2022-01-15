@@ -43,6 +43,9 @@ class FirstFragment : Fragment() {
         binding.buttonMapa.setOnClickListener {
             findNavController().navigate(R.id.action_FirstFragment_to_mapsFragment)
         }
+        binding.button10.setOnClickListener {
+            findNavController().navigate(R.id.action_FirstFragment_to_itemFragment)
+        }
 
     }
 

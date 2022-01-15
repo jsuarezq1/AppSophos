@@ -20,6 +20,9 @@
         <action
             android:id="@+id/action_FirstFragment_to_mapsFragment"
             app:destination="@id/mapsFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_itemFragment"
+            app:destination="@id/itemFragment" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
@@ -42,11 +45,20 @@
     </fragment>
     <fragment
         android:id="@+id/mapsFragment"
-        android:name="com.sophos.myappr.MapsFragment"
+        android:name="com.sophos.myappr.UI.MapsFragment"
         android:label="fragment_maps"
         tools:layout="@layout/fragment_maps" >
         <action
             android:id="@+id/action_mapsFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemFragment"
+        android:name="com.sophos.myappr.ItemFragment"
+        android:label="fragment_item_list2"
+        tools:layout="@layout/fragment_item_list2" >
+        <action
+            android:id="@+id/action_itemFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
     </fragment>
 </navigation>

@@ -1,7 +1,11 @@
 package com.sophos.myappr.placeholder
 
+import android.util.Log
+import androidx.lifecycle.ViewModelProvider
+import com.sophos.myappr.MainActivityViewModel
 import java.util.ArrayList
 import java.util.HashMap
+import java.util.Observer
 
 /**
  * Helper class for providing sample content for user interfaces created by
@@ -11,28 +15,30 @@ import java.util.HashMap
  */
 object PlaceholderContent {
 
-    /**
-     * An array of sample (placeholder) items.
+    //val viewModel = ViewModelProvider(this).get(MainActivityViewModel::class.java)
+
+    /** * An array of sample (placeholder) items.
      */
     val ITEMS: MutableList<PlaceholderItem> = ArrayList()
 
-    /**
-     * A map of sample (placeholder) items, by ID.
-     */
+    /**   * A map of sample (placeholder) items, by ID.   */
     val ITEM_MAP: MutableMap<String, PlaceholderItem> = HashMap()
 
-    private val COUNT = 25
+    private val COUNT = 10
 
     init {
         // Add some sample items.
         for (i in 1..COUNT) {
+            //                //
             addItem(createPlaceholderItem(i))
         }
     }
 
+
     private fun addItem(item: PlaceholderItem) {
         ITEMS.add(item)
         ITEM_MAP.put(item.id, item)
+
     }
 
     private fun createPlaceholderItem(position: Int): PlaceholderItem {
